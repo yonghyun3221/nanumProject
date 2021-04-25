@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     EditText emailText, pwText;
 
 
+
     String text;
 
     @Override
