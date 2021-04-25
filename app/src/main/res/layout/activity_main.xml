@@ -16,40 +16,29 @@
         android:layout_margin="100dp"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <TableRow
+    <EditText
+        android:id="@+id/EmailTextField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:hint="Email" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email" />
-    </TableRow>
-
-    <TableRow
+    <EditText
+        android:id="@+id/PWTextField"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password" />
-    </TableRow>
+        android:layout_height="wrap_content"
+        android:hint="Password" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/SignInBtn"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#FFFFFF"
         android:layout_margin="20dp"
+        android:background="#FFFFFF"
         android:text="로그인" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/SignUpBtn"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
