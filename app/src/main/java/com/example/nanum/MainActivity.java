@@ -28,6 +28,59 @@ public class MainActivity extends AppCompatActivity {
 
     String text;
 
+    boolean check(){
+
+
+        text = emailText.getText().toString();
+
+        System.out.println("onclick");
+
+        new Thread(){
+
+            @Override
+            public void run() {
+
+                System.out.println("runThread");
+
+                try {
+                    System.out.println("run");
+
+                    URL url = new URL("http://116.39.48.151:3000/users");
+                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                    connection.setRequestMethod("GET"); //전송방식
+                    connection.setDoOutput(false);       //데이터를 쓸 지 설정
+                    connection.setDoInput(true);        //데이터를 읽어올지 설정
+
+                    InputStream is = connection.getInputStream();
+                    StringBuilder sb = new StringBuilder();
+                    BufferedReader br = new BufferedReader(new InputStreamReader(is,"UTF-8"));
+                    String result;
+                    int count = 0;
+                    while((result = br.readLine())!=null){
+                        count++;
+                        System.out.println("br = ");
+                        System.out.println(count);
+
+                        sb.append(result+"\n");
+                    }
+
+                    System.out.println(sb);
+
+
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+
+
+
+        return true;
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,53 +98,13 @@ public class MainActivity extends AppCompatActivity {
         signInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                text = emailText.getText().toString();
 
+                //if ( check() )
+                {
+                    Intent intent = new Intent(getApplicationContext(), mainmenuActivity.class);
+                    startActivity(intent);
+                }
 
-                System.out.println("onclick");
-
-
-
-
-                new Thread(){
-
-                    @Override
-                    public void run() {
-
-                        System.out.println("runThread");
-
-                        try {
-                            System.out.println("run");
-
-                            URL url = new URL("http://116.39.48.151:3000/users");
-                            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                            connection.setRequestMethod("GET"); //전송방식
-                            connection.setDoOutput(false);       //데이터를 쓸 지 설정
-                            connection.setDoInput(true);        //데이터를 읽어올지 설정
-
-                            InputStream is = connection.getInputStream();
-                            StringBuilder sb = new StringBuilder();
-                            BufferedReader br = new BufferedReader(new InputStreamReader(is,"UTF-8"));
-                            String result;
-                            int count = 0;
-                            while((result = br.readLine())!=null){
-                                count++;
-                                System.out.println("br = ");
-                                System.out.println(count);
-
-                                sb.append(result+"\n");
-                            }
-
-                            System.out.println(sb);
-
-
-                        } catch (MalformedURLException e) {
-                            e.printStackTrace();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }.start();
 
             }
         });
@@ -112,3 +125,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
+

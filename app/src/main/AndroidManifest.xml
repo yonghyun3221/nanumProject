@@ -22,6 +22,8 @@
 
         <activity android:name=".SignUpActivity"/>
 
+        <activity android:name=".mainmenuActivity"/>
+
 
     </application>
 </manifest>
