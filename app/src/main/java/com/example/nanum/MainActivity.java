@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     EditText emailText, pwText;
 
 
-
+    //jju
     String text;
 
     boolean check(){
