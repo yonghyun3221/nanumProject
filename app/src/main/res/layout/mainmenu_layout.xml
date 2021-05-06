@@ -8,6 +8,7 @@
 
 
     <ScrollView
+        android:id="@+id/sv01"
         android:layout_width="407dp"
         android:layout_height="684dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,48 +20,53 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ListView
+                android:id="@+id/listView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="650dp">
+
+            </ListView>
+
         </LinearLayout>
     </ScrollView>
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/btnHome"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
         android:text="HOME"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button4"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnChatting"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:id="@+id/btnChatting"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:text="Chat"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintStart_toEndOf="@+id/button5" />
+        app:layout_constraintEnd_toStartOf="@+id/btnPost"
+        app:layout_constraintStart_toEndOf="@+id/btnHome" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button4"
-        app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintStart_toEndOf="@+id/button4" />
+        android:id="@+id/btnPost"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:text="Post"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnMypage"
+        app:layout_constraintStart_toEndOf="@+id/btnChatting" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
+        android:id="@+id/btnMypage"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:text="Mypage"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/btnPost" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

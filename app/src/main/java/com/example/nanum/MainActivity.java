@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     EditText emailText, pwText;
 
 
-    //jju
     String text;
 
     boolean check(){
@@ -101,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //if ( check() )
                 {
-                    Intent intent = new Intent(getApplicationContext(), mainmenuActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), MainmenuActivity.class);
                     startActivity(intent);
                 }
 
