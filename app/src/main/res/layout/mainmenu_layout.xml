@@ -9,8 +9,8 @@
 
     <ScrollView
         android:id="@+id/sv01"
-        android:layout_width="407dp"
-        android:layout_height="684dp"
+        android:layout_width="412dp"
+        android:layout_height="650dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,26 +34,36 @@
 
     <Button
         android:id="@+id/btnHome"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="80dp"
         android:text="HOME"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnChatting"
+        app:layout_constraintEnd_toStartOf="@+id/btnSocial"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
+        android:id="@+id/btnSocial"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="SOCIAL"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnChatting"
+        app:layout_constraintStart_toEndOf="@+id/btnHome" />
+
+
+    <Button
         android:id="@+id/btnChatting"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="80dp"
         android:text="Chat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnPost"
-        app:layout_constraintStart_toEndOf="@+id/btnHome" />
+        app:layout_constraintStart_toEndOf="@+id/btnSocial" />
 
     <Button
         android:id="@+id/btnPost"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="80dp"
         android:text="Post"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -62,7 +72,7 @@
 
     <Button
         android:id="@+id/btnMypage"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="80dp"
         android:text="Mypage"
         app:layout_constraintBottom_toBottomOf="parent"

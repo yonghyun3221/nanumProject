@@ -23,10 +23,11 @@ public class MainActivity extends AppCompatActivity {
     Button signInBtn, signUpBtn;
     EditText emailText, pwText;
 
-
     String text;
 
-    boolean check(){
+
+
+    boolean check(EditText email, EditText pw){
 
 
         text = emailText.getText().toString();
@@ -97,13 +98,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //if ( check() )
+                if (true) //check(emailText, pwText) )
                 {
                     Intent intent = new Intent(getApplicationContext(), MainmenuActivity.class);
                     startActivity(intent);
                 }
-
-
             }
         });
 
@@ -113,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
                 startActivity(intent);
-
             }
         });
 
