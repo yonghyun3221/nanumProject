@@ -16,31 +16,31 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class MainmenuActivity extends AppCompatActivity {
-    SingerAdapter adapter;
-    Button btnHome, btnChatting, btnPost, btnMypage, btnSocial;
+public class SocialActivity extends AppCompatActivity {
+    SingerAdapter_social adapter;
+    Button btnHome, btnChatting, btnPost, btnMypage;
     ScrollView sv;
     ListView listView;
 
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mainmenu_layout);
+        setContentView(R.layout.social_layout);
 
         btnHome = (Button) findViewById(R.id.btnHome);
         btnChatting = (Button) findViewById(R.id.btnChatting);
         btnPost = (Button) findViewById(R.id.btnPost);
         btnMypage = (Button) findViewById(R.id.btnMypage);
-        btnSocial = (Button) findViewById(R.id.btnSocial);
 
         sv = (ScrollView) findViewById(R.id.sv01);
         listView = (ListView) findViewById(R.id.listView);
 
 
-        adapter = new SingerAdapter();
+        adapter = new SingerAdapter_social();
 
-        adapter.addItem(new SingerItem("소녀시대", "01071803396", R.drawable.pic));
-        adapter.addItem(new SingerItem("유용현", "01071803396", R.drawable.pic));
+        adapter.addItem(new SingerItem_Social("소녀시대", "01071803396", R.drawable.pic));
+        adapter.addItem(new SingerItem_Social("소2녀시대", "01071803396", R.drawable.pic));
+        adapter.addItem(new SingerItem_Social("소3녀시대", "01071803396", R.drawable.pic));
 
         listView.setAdapter(adapter);
 
@@ -53,20 +53,10 @@ public class MainmenuActivity extends AppCompatActivity {
             }
         });
 
-
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent( getApplicationContext(), MainmenuActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-        btnSocial.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent( getApplicationContext(), SocialActivity.class);
                 startActivity(intent);
             }
         });
@@ -83,15 +73,15 @@ public class MainmenuActivity extends AppCompatActivity {
 
     }
 
-    class SingerAdapter extends BaseAdapter{
-        ArrayList<SingerItem> items = new ArrayList<SingerItem>();
+    class SingerAdapter_social extends BaseAdapter{
+        ArrayList<SingerItem_Social> items = new ArrayList<SingerItem_Social>();
 
         @Override
         public int getCount() {
             return items.size();
         }
 
-        public void addItem(SingerItem item) {
+        public void addItem(SingerItem_Social item) {
             items.add(item);
         }
 
@@ -107,14 +97,14 @@ public class MainmenuActivity extends AppCompatActivity {
 
         public View getView(int position, View convertView, ViewGroup parent) {
             // 뷰 객체 재사용
-            SingerItemView view = null;
+            SingerItemView_Social view = null;
             if (convertView == null) {
-                view = new SingerItemView(getApplicationContext());
+                view = new SingerItemView_Social(getApplicationContext());
             } else {
-                view = (SingerItemView) convertView;
+                view = (SingerItemView_Social) convertView;
             }
 
-            SingerItem item = items.get(position);
+            SingerItem_Social item = items.get(position);
 
             view.setName(item.getName());
             view.setMobile(item.getMobile());
