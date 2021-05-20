@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".SignUpActivity"/>
         <activity android:name=".MainmenuActivity"/>
+        <activity android:name=".PostActivity"/>
+
 
 
     </application>

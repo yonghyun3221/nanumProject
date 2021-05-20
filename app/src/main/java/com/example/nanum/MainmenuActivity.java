@@ -57,8 +57,8 @@ public class MainmenuActivity extends AppCompatActivity {
         btnPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent intent = new Intent( getApplicationContext(), ItemPostActivity.class);
-                //startActivity(intent);
+                Intent intent = new Intent( getApplicationContext(), PostActivity.class);
+                startActivity(intent);
             }
         });
 
