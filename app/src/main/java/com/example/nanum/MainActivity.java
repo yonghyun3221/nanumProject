@@ -17,7 +17,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
-    private FloatingActionButton fab_post;
+
     private FragmentManager fm;
     private FragmentTransaction ft;
 
@@ -36,17 +36,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        fab_post = (FloatingActionButton) findViewById(R.id.post);
-        fab_post.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), PostTabActivity.class);
-                startActivity(intent);
-            }
-        });
+
         bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setBackground(null);
-        bottomNavigationView.getMenu().getItem(2).setEnabled(false); //floatingbutton 빈공간 설정
+        //bottomNavigationView.getMenu().getItem(2).setEnabled(false); //floatingbutton 빈공간 설정
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -68,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
         bottomNavigationView.setSelectedItemId(R.id.home);
     }
 

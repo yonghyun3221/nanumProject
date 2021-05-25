@@ -1,5 +1,6 @@
 package com.example.nanum;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 public class HomeTabFragment extends Fragment // Fragment 클래스를 상속받아야한다
@@ -22,6 +25,8 @@ public class HomeTabFragment extends Fragment // Fragment 클래스를 상속받
     SingerAdapter adapter;
     ScrollView sv;
     ListView listView;
+    FloatingActionButton postBtn;
+
 
     private View view;
 
@@ -34,6 +39,7 @@ public class HomeTabFragment extends Fragment // Fragment 클래스를 상속받
 
         sv = (ScrollView) view.findViewById(R.id.sv01);
         listView = (ListView)  view.findViewById(R.id.listView);
+        postBtn = (FloatingActionButton) view.findViewById(R.id.postHome);
 
 
         adapter = new SingerAdapter();
@@ -49,6 +55,14 @@ public class HomeTabFragment extends Fragment // Fragment 클래스를 상속받
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 SingerItem item = (SingerItem) adapter.getItem(position);
                 Toast.makeText(getActivity().getApplicationContext(), "선택 :"+item.getName(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+        postBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( view.getContext(), PostTabActivity.class);
+                startActivity(intent);
             }
         });
 

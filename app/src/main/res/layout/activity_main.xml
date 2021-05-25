@@ -5,20 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <FrameLayout
         android:id="@+id/frame_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="?attr/actionBarSize"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/actionBarSize" />
+
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         app:fabCradleMargin="20dp"
-        app:fabCradleVerticalOffset="8dp"
         app:fabCradleRoundedCornerRadius="20dp"
-        android:layout_gravity="bottom">
+        app:fabCradleVerticalOffset="8dp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_nav"
@@ -26,15 +27,8 @@
             android:layout_height="match_parent"
             android:layout_marginEnd="16dp"
             android:background="@android:color/transparent"
-            app:menu="@menu/bottom_nav_menu"/>
+            app:menu="@menu/bottom_nav_menu" />
     </com.google.android.material.bottomappbar.BottomAppBar>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/post"
-        app:layout_anchor="@id/bottom_bar"
-        android:src="@drawable/ic_post"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

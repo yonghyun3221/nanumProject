@@ -22,6 +22,7 @@ public class ProfileTabFragment extends Fragment // Fragment 클래스를 상속
     {
         view = inflater.inflate(R.layout.profile_layout,container,false);
         text = view.findViewById(R.id.textView10);
+
         return view;
     }
 }

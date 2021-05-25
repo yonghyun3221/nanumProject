@@ -14,8 +14,8 @@ public class ChatTabFragment extends Fragment // Fragment 클래스를 상속받
 {
 
     private View view;
-
     TextView text;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
