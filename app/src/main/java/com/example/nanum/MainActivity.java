@@ -2,123 +2,75 @@ package com.example.nanum;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView mainImage;
-    Button signInBtn, signUpBtn;
-    EditText emailText, pwText;
+    private BottomNavigationView bottomNavigationView;
+    private FloatingActionButton fab_post;
+    private FragmentManager fm;
+    private FragmentTransaction ft;
 
-    String text;
+    SocialTabFragment socialTabFragment = new SocialTabFragment();
+    ChatTabFragment chatTabFragment = new ChatTabFragment();
+    ProfileTabFragment profileTabFragment = new ProfileTabFragment();
+    HomeTabFragment homeTabFragment = new HomeTabFragment();
 
-
-
-    boolean check(EditText email, EditText pw){
-
-
-        text = emailText.getText().toString();
-
-        System.out.println("onclick");
-
-        new Thread(){
-
-            @Override
-            public void run() {
-
-                System.out.println("runThread");
-
-                try {
-                    System.out.println("run");
-
-                    URL url = new URL("http://116.39.48.151:3000/users");
-                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                    connection.setRequestMethod("GET"); //전송방식
-                    connection.setDoOutput(false);       //데이터를 쓸 지 설정
-                    connection.setDoInput(true);        //데이터를 읽어올지 설정
-
-                    InputStream is = connection.getInputStream();
-                    StringBuilder sb = new StringBuilder();
-                    BufferedReader br = new BufferedReader(new InputStreamReader(is,"UTF-8"));
-                    String result;
-                    int count = 0;
-                    while((result = br.readLine())!=null){
-                        count++;
-                        System.out.println("br = ");
-                        System.out.println(count);
-
-                        sb.append(result+"\n");
-                    }
-
-                    System.out.println(sb);
-
-
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }.start();
-
-
-
-        return true;
+    private void replaceFragment(Fragment fragment){
+        fm = getSupportFragmentManager();
+        ft = fm.beginTransaction();
+        ft.replace(R.id.frame_layout, fragment).commit();
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mainImage = (ImageView)findViewById(R.id.imageView3);
-        signInBtn = (Button)findViewById(R.id.SignInBtn);
-        signUpBtn = (Button)findViewById(R.id.SignUpBtn);
-        emailText = (EditText)findViewById(R.id.EmailTextField);
-        pwText = (EditText) findViewById(R.id.PWTextField);
-
-        mainImage.setVisibility(View.VISIBLE);
-        mainImage.setImageResource(R.drawable.pic);
-
-        signInBtn.setOnClickListener(new View.OnClickListener() {
+        fab_post = (FloatingActionButton) findViewById(R.id.post);
+        fab_post.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
-                if (true) //check(emailText, pwText) )
-                {
-                    Intent intent = new Intent(getApplicationContext(), MainmenuActivity.class);
-                    startActivity(intent);
-                }
-            }
-        });
-
-
-        signUpBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), PostTabActivity.class);
                 startActivity(intent);
             }
         });
+        bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setBackground(null);
+        bottomNavigationView.getMenu().getItem(2).setEnabled(false); //floatingbutton 빈공간 설정
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.home:
+                        replaceFragment(homeTabFragment);
+                        break;
+                    case R.id.social:
+                        replaceFragment(socialTabFragment);
+                        break;
+                    case R.id.chat:
+                        replaceFragment(chatTabFragment);
+                        break;
+                    case R.id.profile:
+                        replaceFragment(profileTabFragment);
+                        break;
+                }
 
-
-
-
-
+                return true;
+            }
+        });
+        bottomNavigationView.setSelectedItemId(R.id.home);
     }
+
 }
+
 

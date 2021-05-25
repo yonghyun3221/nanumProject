@@ -4,34 +4,32 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.InputStream;
 
-public class PostActivity extends AppCompatActivity {
+public class PostTabActivity extends AppCompatActivity
+{
     ImageView postImg;
     Button postBtn, imgBtn;
     EditText textPost;
     //User user = ((User)getApplicationContext());
     String userID;
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.post_layout);
 
-        postImg = (ImageView) findViewById(R.id.imgPost);
-        imgBtn = (Button) findViewById(R.id.postBtn);
-        postBtn = (Button) findViewById(R.id.postBtn2);
+        postImg = (ImageView) findViewById(R.id.imageView2);
+        imgBtn = (Button) findViewById(R.id.button);
+        postBtn = (Button) findViewById(R.id.button2);
         textPost = (EditText) findViewById(R.id.postTxt);
 
         imgBtn.setOnClickListener(new View.OnClickListener() {
@@ -54,9 +52,9 @@ public class PostActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 System.out.println("아이템 유저아이디 : " + userID);
-                Toast.makeText(new AppCompatActivity(), "이건?" + userID, Toast.LENGTH_LONG).show();
-                Log.d("check", userID);
-                Intent intent = new Intent( getApplicationContext(), MainmenuActivity.class);
+               // Toast.makeText(new AppCompatActivity(), "이건?" + userID, Toast.LENGTH_LONG).show();
+               // Log.d("check", userID);
+                Intent intent = new Intent( getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });

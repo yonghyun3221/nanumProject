@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nanum">
 
+
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
@@ -12,19 +13,19 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Nanum" >
-
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity"></activity>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme"></activity>
+        <activity android:name=".ExplainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity"/>
-        <activity android:name=".MainmenuActivity"/>
-        <activity android:name=".PostActivity"/>
-        <activity android:name=".SocialActivity"/>
-
-
+        <activity android:name=".PostTabActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
 
     </application>
 </manifest>

@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">nanum</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">Skip</string>
+    <string name="start">확인</string>
+
+    <string name="slide_title">안녕하세요</string>
+    <string name="slide_desc">나눔 앱에 대해 간단히 소개할게요</string>
+
+    <string name="slide_1_title">정보 공유</string>
+    <string name="slide_1_desc">우리 커뮤니티에 있는 분들이 남기는 실제 커뮤니티의 정보를 공유해보세요</string>
+
+    <string name="slide_2_title">물품 나눔·기부·대여</string>
+    <string name="slide_2_desc">필요 없어진 물품이나 당장은 쓸 필요가 없는 물품들을 필요한 우리 커뮤니티의 이웃들께 나눠보세요</string>
+
+    <string name="slide_3_title">재능 나눔·기부</string>
+    <string name="slide_3_desc">재능까지 나눠보세요</string>
+
+    <string name="slide_4_title">취미 공유</string>
+    <string name="slide_4_desc">즐기고 있는 취미를 공유하거나 같이 즐겨보세요</string>
+
+
+    <string name="slide_5_desc">깨끗하고 즐거운 커뮤니티 앱을 같이 만들어나가봐요</string>
+
 </resources>

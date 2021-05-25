@@ -1,52 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-
-    <Button
-        android:id="@+id/postBtn2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="물품등록"
-        app:layout_constraintTop_toBottomOf="@+id/postTxt"
-        tools:layout_editor_absoluteX="16dp" />
+    android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imgPost"
-        android:layout_width="match_parent"
-        android:layout_height="357dp"
+        android:id="@+id/imageView2"
+        android:layout_width="412dp"
+        android:layout_height="229dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/postBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="사진등록"
-        app:layout_constraintBottom_toTopOf="@+id/postTxt"
-        app:layout_constraintTop_toBottomOf="@+id/imgPost"
-        tools:layout_editor_absoluteX="-47dp" />
+        android:id="@+id/button"
+        android:layout_width="411dp"
+        android:layout_height="71dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/postTxt"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_width="410dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.885" />
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="406dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="8dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postTxt" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-
