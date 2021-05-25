@@ -38,9 +38,9 @@ public class SocialActivity extends AppCompatActivity {
 
         adapter = new SingerAdapter_social();
 
-        adapter.addItem(new SingerItem_Social("소녀시대", "01071803396", R.drawable.pic));
-        adapter.addItem(new SingerItem_Social("소2녀시대", "01071803396", R.drawable.pic));
-        adapter.addItem(new SingerItem_Social("소3녀시대", "01071803396", R.drawable.pic));
+        adapter.addItem(new SingerItem_Social("cup", "컵이다", R.drawable.cup));
+        adapter.addItem(new SingerItem_Social("cup1", "컵임", R.drawable.cup));
+        adapter.addItem(new SingerItem_Social("cup2", "컵?", R.drawable.cup));
 
         listView.setAdapter(adapter);
 
