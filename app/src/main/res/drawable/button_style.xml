@@ -9,6 +9,6 @@
     <corners
         android:radius="20dp"  /> // 선 휘는각도
 
-    />
+
 
 </shape>
