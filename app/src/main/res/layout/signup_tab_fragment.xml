@@ -71,6 +71,25 @@
         app:layout_constraintTop_toBottomOf="@+id/pwcheck"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
+
+    <EditText
+        android:id="@+id/sphone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="010-0000-0000"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/textbutton_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent=".8" />
+
+
     <EditText
         android:id="@+id/location"
         android:layout_width="0dp"
@@ -84,7 +103,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/sphone"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
 
@@ -102,6 +121,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/location"
-        app:layout_constraintVertical_bias=".5"
+        app:layout_constraintVertical_bias=".6"
         app:layout_constraintWidth_percent=".8" />
 </androidx.constraintlayout.widget.ConstraintLayout>

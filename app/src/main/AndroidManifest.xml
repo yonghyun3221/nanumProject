@@ -26,6 +26,7 @@
         </activity>
         <activity android:name=".PostTabActivity"></activity>
         <activity android:name=".MainActivity"></activity>
+        <activity android:name="EditProfileActivity"/>
 
     </application>
 </manifest>
