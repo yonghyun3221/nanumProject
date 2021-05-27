@@ -1,5 +1,6 @@
 package com.example.nanum;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 public class SocialTabFragment extends Fragment{ // Fragment 클래스를 상속받아야한다
@@ -21,7 +24,7 @@ public class SocialTabFragment extends Fragment{ // Fragment 클래스를 상속
     SingerAdapter_social adapter;
     ScrollView sv;
     ListView listView;
-
+    FloatingActionButton postBtn;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
@@ -31,7 +34,7 @@ public class SocialTabFragment extends Fragment{ // Fragment 클래스를 상속
 
         sv = (ScrollView)view.findViewById(R.id.sv01);
         listView = (ListView)view.findViewById(R.id.listView);
-
+        postBtn = (FloatingActionButton)view.findViewById(R.id.post3);
         adapter = new SingerAdapter_social();
 
 
@@ -45,6 +48,14 @@ public class SocialTabFragment extends Fragment{ // Fragment 클래스를 상속
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 SingerItem item = (SingerItem) adapter.getItem(position);
                 Toast.makeText(getActivity().getApplicationContext(), "선택 :"+item.getName(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+        postBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( view.getContext(), PostTabActivity.class);
+                startActivity(intent);
             }
         });
 
