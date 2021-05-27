@@ -15,4 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.io.InputStream;
 
 public class SocialPostTabActivity  extends AppCompatActivity {
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+    }
 }

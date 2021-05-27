@@ -64,7 +64,10 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView.setSelectedItemId(R.id.home);
     }
-
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+    }
 }
 
 

@@ -29,5 +29,8 @@ public class SplashActivity extends AppCompatActivity {
             }
         },SPLASH_VIEW_TIME);
     }
-
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+    }
 }
