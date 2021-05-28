@@ -8,6 +8,8 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 
 public class LoginAdapter extends FragmentStatePagerAdapter {
 
+
+
     private Context context;
     int totalTabs;
 
@@ -27,9 +29,12 @@ public class LoginAdapter extends FragmentStatePagerAdapter {
         switch (position){
             case 0:
               LoginTabFragment loginTabFragment = new LoginTabFragment();
+
               return loginTabFragment;
             case 1:
                 SignupTabFragment signupTabFragment = new SignupTabFragment();
+                //FragmentManager manager = signupTabFragment.getFragmentManager();
+                //manager.beginTransaction().replace(R.id.singupLayout, signupTabFragment).commit();
                 return signupTabFragment;
             default:
                 return null;

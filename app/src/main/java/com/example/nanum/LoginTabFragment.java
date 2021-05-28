@@ -62,7 +62,6 @@ public class LoginTabFragment extends Fragment {
                     passwd_s = passwd.getText().toString();
                     System.out.println("test id pw : " + email_s + " , " + passwd_s);
 
-                    Toast.makeText(getActivity(), "login", Toast.LENGTH_LONG).show();
 
                     Intent intent = new Intent(getActivity().getApplicationContext(), MainActivity.class);
                     startActivity(intent);

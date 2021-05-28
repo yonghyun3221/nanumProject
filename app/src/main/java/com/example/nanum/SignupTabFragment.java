@@ -28,6 +28,8 @@ public class SignupTabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.signup_tab_fragment, container, false);
 
+        //Toast.makeText(this.getActivity(), "hello from fragment", Toast.LENGTH_LONG).show();
+
         semail= root.findViewById(R.id.semail);
         spw = root.findViewById(R.id.spw);
         spwcheck = root.findViewById(R.id.pwcheck);
