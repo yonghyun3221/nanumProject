@@ -59,10 +59,10 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_google"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="56dp"
+        android:layout_height="54dp"
         android:background="@drawable/ic_google"
         android:elevation="35dp"
         android:src="@drawable/ic_google"
