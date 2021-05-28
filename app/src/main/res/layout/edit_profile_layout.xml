@@ -62,7 +62,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.7"
-            android:background="@drawable/layout_style"></LinearLayout>
+            android:background="@drawable/layout_style"/>
 
         <EditText
             android:id="@+id/semail"
@@ -82,6 +82,7 @@
             app:layout_constraintWidth_percent=".8" />
 
         <EditText
+            android:inputType="textPassword"
             android:id="@+id/spw"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -99,6 +100,7 @@
             app:layout_constraintWidth_percent=".8" />
 
         <EditText
+            android:inputType="textPassword"
             android:id="@+id/pwcheck"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
