@@ -8,8 +8,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Dimension;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
@@ -58,6 +60,9 @@ public class LoginActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.viewPager);
         login = (Button)findViewById(R.id.login);
+
+        TextView textView = (TextView) google.getChildAt(0);
+        textView.setText(getString(R.string.sign_in));
 
         tabLayout.addTab(tabLayout.newTab().setText("LOGIN"));
         tabLayout.addTab(tabLayout.newTab().setText("SIGNUP"));

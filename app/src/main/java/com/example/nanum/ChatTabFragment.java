@@ -21,7 +21,6 @@ public class ChatTabFragment extends Fragment // Fragment 클래스를 상속받
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         view = inflater.inflate(R.layout.chat_layout,container,false);
-        text = view.findViewById(R.id.textView4);
 
         return view;
     }

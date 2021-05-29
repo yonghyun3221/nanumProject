@@ -25,4 +25,6 @@
 
     <string name="editProfile">정보수정</string>
     <string name="logout">LOG OUT</string>
+
+    <string name="sign_in">Google 계정으로 로그인</string>
 </resources>

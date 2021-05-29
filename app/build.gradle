@@ -30,7 +30,7 @@ android {
 
 dependencies {
     implementation 'com.google.firebase:firebase-auth'
-
+    implementation 'com.google.firebase:firebase-database:19.1.0'
     implementation 'com.google.firebase:firebase-analytics:17.2.0'
     implementation platform('com.google.firebase:firebase-bom:28.0.1')
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
