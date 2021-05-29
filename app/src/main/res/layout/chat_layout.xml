@@ -63,13 +63,16 @@
             android:padding="6dp"
             />
 
-        <ImageButton
+        <Button
             android:id="@+id/chatBtnSend"
-            android:layout_width="50dp"
+            android:layout_width="70dp"
             android:layout_height="45dp"
             android:layout_gravity="center_horizontal"
-            android:foreground="?attr/selectableItemBackground"
             android:scaleType="fitXY"
-            android:src="@android:drawable/ic_menu_send" />
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/layout_style"
+            android:text="전송"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

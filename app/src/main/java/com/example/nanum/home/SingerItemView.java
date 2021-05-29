@@ -2,6 +2,7 @@ package com.example.nanum.home;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
@@ -42,7 +43,11 @@ public class SingerItemView extends LinearLayout {
         imageView = (ImageView) findViewById(R.id.homeImg);
 
         //여기부분 글꼴이나 색상 변집가능한듯
-        textView.setTextColor(Color.BLUE);
+       // textView.setTextColor(Color.BLUE);
+
+        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "font/nanumsquarer.ttf"); // font 폴더내에 있는 jua.ttf 파일을 typeface로 설정
+        textView.setTypeface(typeface);
+        textView2.setTypeface(typeface);
 
     }
 

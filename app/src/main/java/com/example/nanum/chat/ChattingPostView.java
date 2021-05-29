@@ -1,6 +1,7 @@
 package com.example.nanum.chat;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
@@ -39,6 +40,10 @@ public class ChattingPostView extends LinearLayout {
         textView2 = (TextView) findViewById(R.id.chatPostText);
         imageView = (ImageView) findViewById(R.id.chatPostImg);
 
+
+        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "font/nanumsquarer.ttf"); // font 폴더내에 있는 jua.ttf 파일을 typeface로 설정
+        textView.setTypeface(typeface);
+        textView2.setTypeface(typeface);
 
     }
 

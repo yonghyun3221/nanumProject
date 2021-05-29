@@ -102,7 +102,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/and1" /> <!-- 맞는 아이콘 찾아서 바꾸기 -->
+                app:srcCompat="@drawable/ic_baseline_edit_24" /> <!-- 맞는 아이콘 찾아서 바꾸기 -->
 
             <TextView
                 android:layout_width="match_parent"
@@ -123,7 +123,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                tools:srcCompat="@tools:sample/avatars" /> <!-- 맞는 아이콘 찾아서 바꾸기 -->
+                android:background="@drawable/ic_comment" /> <!-- 맞는 아이콘 찾아서 바꾸기 -->
 
             <TextView
                 android:layout_width="match_parent"
@@ -202,29 +202,34 @@
             app:layout_constraintTop_toBottomOf="@+id/profilePhone"
             app:layout_constraintWidth_percent=".8" />
 
-        <Button
-            android:id="@+id/profileEditBtn"
-            android:layout_width="53dp"
-            android:layout_height="52dp"
-            android:layout_margin="8dp"
-            android:layout_marginBottom="12dp"
-            android:background="@drawable/ic_baseline_edit_24"
-            app:layout_constraintBottom_toTopOf="@+id/profileLogoutBtn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/profileLogoutBtn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/button_style"
-            android:text="@string/logout"
+        <LinearLayout
+            android:layout_width="410dp"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintWidth_percent=".8"/>
+            app:layout_constraintTop_toBottomOf="@+id/profilelocation">
+
+            <Button
+                android:id="@+id/profileEditBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_style"
+                android:text="정보 수정"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/profileLogoutBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_style"
+                android:text="@string/logout"
+                android:textColor="@color/black"
+                app:layout_constraintWidth_percent=".8" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
