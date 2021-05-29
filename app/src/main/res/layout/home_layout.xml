@@ -13,7 +13,14 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="133dp"
+            android:layout_height="67dp"
+            android:text="성포동" />
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/postHome"
@@ -36,27 +43,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll"
-        app:layout_constraintVertical_bias="0.0"/>
-
-    <ScrollView
-        android:layout_width="407dp"
-        android:layout_height="684dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ll"
         app:layout_constraintVertical_bias="0.0">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="wrap_content">
 
-            <ListView
-                android:id="@+id/chatlListView"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="684dp" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/chatlListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="650dp" />
+            </LinearLayout>
+        </ScrollView>
     </ScrollView>
 
 

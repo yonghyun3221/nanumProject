@@ -47,7 +47,7 @@
 
         </LinearLayout>
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/chatSendImg"
 
             android:layout_width="70dp"
