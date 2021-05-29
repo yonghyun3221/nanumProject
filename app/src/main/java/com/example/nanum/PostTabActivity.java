@@ -80,8 +80,4 @@ public class PostTabActivity extends AppCompatActivity
             }
         }
     }
-    @Override
-    public void onBackPressed() {
-        //super.onBackPressed();
-    }
 }

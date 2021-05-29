@@ -4,7 +4,7 @@
     <solid android:color="#ffffff" /> //배경색
 
     <corners
-        android:radius="20dp" /> // 선 휘는각도
-
+        android:bottomLeftRadius="20dp"
+        android:bottomRightRadius="20dp"/> // 선 휘는각도
 
 </shape>
