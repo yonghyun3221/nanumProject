@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/post3"
+        android:id="@+id/socialPost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_post"
@@ -27,7 +27,7 @@
         app:layout_constraintVertical_bias="0.943" />
 
     <ScrollView
-        android:id="@+id/sv01"
+        android:id="@+id/chatSV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -52,7 +52,7 @@
             android:orientation="vertical">
 
             <ListView
-                android:id="@+id/listView"
+                android:id="@+id/chatlListView"
                 android:layout_width="match_parent"
                 android:layout_height="684dp" />
         </LinearLayout>

@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-public class SingerItemView_Social extends LinearLayout {
+public class ChattingPostView extends LinearLayout {
 
     TextView textView;
     TextView textView2;
@@ -17,13 +17,13 @@ public class SingerItemView_Social extends LinearLayout {
 
     // Generate > Constructor
 
-    public SingerItemView_Social(Context context) {
+    public ChattingPostView(Context context) {
         super(context);
 
         init(context);
     }
 
-    public SingerItemView_Social(Context context, @Nullable AttributeSet attrs) {
+    public ChattingPostView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
         init(context);
@@ -32,10 +32,10 @@ public class SingerItemView_Social extends LinearLayout {
     // singer_item.xml을 inflation
     private void init(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.singer_item_social, this, true);
+        inflater.inflate(R.layout.singer_item, this, true);
 
-        textView = (TextView) findViewById(R.id.socialName);
-        textView2 = (TextView) findViewById(R.id.socialText);
+        textView = (TextView) findViewById(R.id.chatPostName);
+        textView2 = (TextView) findViewById(R.id.socialName);
         imageView = (ImageView) findViewById(R.id.socialImg);
     }
 

@@ -34,9 +34,9 @@ public class SingerItemView extends LinearLayout {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.singer_item, this, true);
 
-        textView = (TextView) findViewById(R.id.textView);
-        textView2 = (TextView) findViewById(R.id.textView2);
-        imageView = (ImageView) findViewById(R.id.imageView);
+        textView = (TextView) findViewById(R.id.socialName);
+        textView2 = (TextView) findViewById(R.id.socialText);
+        imageView = (ImageView) findViewById(R.id.socialImg);
     }
 
     public void setName(String name) {

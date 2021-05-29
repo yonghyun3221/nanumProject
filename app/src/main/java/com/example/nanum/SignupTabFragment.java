@@ -68,31 +68,10 @@ public class SignupTabFragment extends Fragment {
 
 
                 if (spw_s.equals(spwcheck_s)){
-                    //toast test
-                    Toast toast = Toast.makeText(
-                            //getActivity(),"Custom Toast From Fragment",Toast.LENGTH_LONG
-                            getActivity().getApplicationContext(), "Custom Toast From Fragment", Toast.LENGTH_LONG
-                    );
-                    // Set the Toast display position layout center
-                    toast.setGravity(Gravity.CENTER,0,0);
-                    // Finally, show the toast
-                    toast.show();
 
-                    Toast.makeText(mActivity,"Text you want to display",Toast.LENGTH_SHORT).show();
-                    context = container.getContext();
-                    Toast.makeText(context, "이것은 Toast 메시지입니다.", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(SignupTabFragment.super.getActivity(),"Toast Message",Toast.LENGTH_SHORT).show();
-                    Toast.makeText(root.getContext(), "tost", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getActivity(),"Text!33333",Toast.LENGTH_SHORT).show();
-                    Toast.makeText(SignupTabFragment.this.getContext(), "Text!1111",Toast.LENGTH_SHORT).show();
-                    Toast.makeText(SignupTabFragment.this.getActivity(), "Text!22222",Toast.LENGTH_SHORT).show();
-                    Toast.makeText(root.getContext().getApplicationContext(), "texttttttt", Toast.LENGTH_LONG).show();
-
-                    name.setText("성공");
-
-
+                    Toast.makeText(getActivity(), "회원가입성공", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(getActivity().getApplicationContext(), LoginActivity.class);
-                    //startActivity(intent);
+                    startActivity(intent);
                 }
 
 

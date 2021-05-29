@@ -32,9 +32,9 @@ public class SocialTabFragment extends Fragment{ // Fragment 클래스를 상속
         view = inflater.inflate(R.layout.social_layout,container,false);
 
 
-        sv = (ScrollView)view.findViewById(R.id.sv01);
-        listView = (ListView)view.findViewById(R.id.listView);
-        postBtn = (FloatingActionButton)view.findViewById(R.id.post3);
+        sv = (ScrollView)view.findViewById(R.id.chatSV);
+        listView = (ListView)view.findViewById(R.id.chatlListView);
+        postBtn = (FloatingActionButton)view.findViewById(R.id.socialPost);
         adapter = new SingerAdapter_social();
 
 
@@ -46,7 +46,7 @@ public class SocialTabFragment extends Fragment{ // Fragment 클래스를 상속
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                SingerItem item = (SingerItem) adapter.getItem(position);
+                SingerItem_Social item = (SingerItem_Social) adapter.getItem(position);
                 Toast.makeText(getActivity().getApplicationContext(), "선택 :"+item.getName(), Toast.LENGTH_LONG).show();
             }
         });

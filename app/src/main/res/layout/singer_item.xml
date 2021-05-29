@@ -10,7 +10,7 @@
         android:layout_margin="16dp">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/socialImg"
             android:layout_width="128dp"
             android:layout_height="127dp"
             android:src="@mipmap/ic_launcher" />
@@ -22,7 +22,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/socialName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
@@ -31,7 +31,7 @@
                 android:textSize="30sp" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/socialText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"

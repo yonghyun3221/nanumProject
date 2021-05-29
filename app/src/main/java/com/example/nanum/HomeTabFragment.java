@@ -37,8 +37,8 @@ public class HomeTabFragment extends Fragment // Fragment 클래스를 상속받
     {
         view = inflater.inflate(R.layout.home_layout,container,false);
 
-        sv = (ScrollView) view.findViewById(R.id.sv01);
-        listView = (ListView)  view.findViewById(R.id.listView);
+        sv = (ScrollView) view.findViewById(R.id.chatSV);
+        listView = (ListView)  view.findViewById(R.id.chatlListView);
         postBtn = (FloatingActionButton) view.findViewById(R.id.postHome);
 
 
