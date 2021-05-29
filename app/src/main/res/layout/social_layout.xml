@@ -54,7 +54,8 @@
             <ListView
                 android:id="@+id/chatlListView"
                 android:layout_width="match_parent"
-                android:layout_height="684dp" />
+                android:layout_height="684dp"
+                />
         </LinearLayout>
     </ScrollView>
 

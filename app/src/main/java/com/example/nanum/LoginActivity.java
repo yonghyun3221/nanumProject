@@ -2,12 +2,15 @@ package com.example.nanum;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +18,7 @@ import androidx.annotation.Dimension;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.gms.common.api.internal.BackgroundDetector;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
@@ -34,6 +38,8 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+
+import static com.google.android.gms.common.SignInButton.COLOR_DARK;
 
 public class LoginActivity extends AppCompatActivity {
     Boolean logout = true;
@@ -60,6 +66,8 @@ public class LoginActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.viewPager);
         login = (Button)findViewById(R.id.login);
+
+        google.setColorScheme(COLOR_DARK);
 
         TextView textView = (TextView) google.getChildAt(0);
         textView.setText(getString(R.string.sign_in));
@@ -122,7 +130,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
-
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {

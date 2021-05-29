@@ -9,6 +9,10 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
+import com.bumptech.glide.Glide;
+
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class ChattingPostView extends LinearLayout {
 
     TextView textView;
@@ -37,6 +41,8 @@ public class ChattingPostView extends LinearLayout {
         textView = (TextView) findViewById(R.id.chatPostName);
         textView2 = (TextView) findViewById(R.id.socialName);
         imageView = (ImageView) findViewById(R.id.socialImg);
+
+
     }
 
     public void setName(String name) {

@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
+import com.bumptech.glide.Glide;
+
 public class ChattingSendView extends LinearLayout {
 
     TextView textView;
@@ -37,6 +39,7 @@ public class ChattingSendView extends LinearLayout {
         textView = (TextView) findViewById(R.id.chatSendName);
         textView2 = (TextView) findViewById(R.id.chatSendText);
         imageView = (ImageView) findViewById(R.id.chatSendImg);
+
     }
 
 

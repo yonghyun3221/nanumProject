@@ -19,7 +19,9 @@
             android:id="@+id/button3"
             android:layout_width="133dp"
             android:layout_height="67dp"
-            android:text="성포동" />
+            android:layout_margin="5dp"
+            android:text="성포동"
+            android:background="@drawable/button_style"/>
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

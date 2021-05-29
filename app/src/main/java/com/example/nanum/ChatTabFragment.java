@@ -37,7 +37,7 @@ public class ChatTabFragment extends Fragment // Fragment 클래스를 상속받
         sendAdapter = new SingerAdapter_chat_send();
 
 
-        sendAdapter.addItem(new ChattingSendItem("유용현", "끝낫나?", R.drawable.pic));
+        sendAdapter.addItem(new ChattingSendItem("유용현", "끝낫나?", R.drawable.flower));
 
         listView.setAdapter(sendAdapter);
 

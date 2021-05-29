@@ -1,6 +1,7 @@
 package com.example.nanum;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +26,8 @@ public class SocialTabFragment extends Fragment{ // Fragment 클래스를 상속
     ScrollView sv;
     ListView listView;
     FloatingActionButton postBtn;
+    LayoutInflater layoutInflater;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
@@ -36,7 +39,6 @@ public class SocialTabFragment extends Fragment{ // Fragment 클래스를 상속
         listView = (ListView)view.findViewById(R.id.chatlListView);
         postBtn = (FloatingActionButton)view.findViewById(R.id.socialPost);
         adapter = new SingerAdapter_social();
-
 
         adapter.addItem(new SingerItem_Social("소녀시대", "01071803396", R.drawable.pic));
         adapter.addItem(new SingerItem_Social("소2녀시대", "01071803396", R.drawable.pic));
@@ -84,7 +86,9 @@ public class SocialTabFragment extends Fragment{ // Fragment 클래스를 상속
             return position;
         }
 
+        @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+
             // 뷰 객체 재사용
             SingerItemView_Social view = null;
             if (convertView == null) {
@@ -99,9 +103,9 @@ public class SocialTabFragment extends Fragment{ // Fragment 클래스를 상속
             view.setMobile(item.getMobile());
             view.setImage(item.getResId());
 
-
             return view;
         }
+
     }
 
 }

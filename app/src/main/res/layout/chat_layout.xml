@@ -17,6 +17,7 @@
         app:layout_constraintVertical_bias="0.0"/>
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="408dp"
         android:layout_height="667dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,9 +34,42 @@
             <ListView
                 android:id="@+id/chatlListView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"/>
         </LinearLayout>
     </ScrollView>
 
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/chatSV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@drawable/textbutton_style"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:maxLength="120"
+            android:maxLines="5"
+            android:padding="6dp"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_send1"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:foreground="?attr/selectableItemBackground"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/ic_menu_send" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
