@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -38,9 +37,9 @@ public class LoginTabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.login_tab_fragment, container, false);
 
-        email = root.findViewById(R.id.email);
-        passwd = root.findViewById(R.id.passwd);
-        login = (Button)root.findViewById(R.id.login);
+        email = root.findViewById(R.id.loginEmail);
+        passwd = root.findViewById(R.id.logInPasswd);
+        login = (Button)root.findViewById(R.id.loginBtn);
 
 
         email.setTranslationX(800);

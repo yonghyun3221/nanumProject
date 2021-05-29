@@ -1,4 +1,4 @@
-package com.example.nanum.main;
+package com.example.nanum.home;
 
 
 public class SingerItem {

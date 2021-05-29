@@ -33,7 +33,7 @@ public class ChattingPostView extends LinearLayout {
     // singer_item.xml을 inflation
     private void init(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.singer_item, this, true);
+        inflater.inflate(R.layout.chatting_post_item, this, true);
 
         textView = (TextView) findViewById(R.id.chatPostName);
         textView2 = (TextView) findViewById(R.id.chatPostText);

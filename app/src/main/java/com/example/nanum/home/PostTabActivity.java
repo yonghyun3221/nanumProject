@@ -1,4 +1,4 @@
-package com.example.nanum.main;
+package com.example.nanum.home;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -28,12 +28,12 @@ public class PostTabActivity extends AppCompatActivity
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.post_layout);
+        setContentView(R.layout.home_post_layout);
 
-        postImg = (ImageView) findViewById(R.id.imageView2);
-        imgBtn = (Button) findViewById(R.id.button);
-        postBtn = (Button) findViewById(R.id.button2);
-        textPost = (EditText) findViewById(R.id.postTxt);
+        postImg = (ImageView) findViewById(R.id.homePostImage);
+        imgBtn = (Button) findViewById(R.id.homePostPhoto);
+        postBtn = (Button) findViewById(R.id.homePostSubmit);
+        textPost = (EditText) findViewById(R.id.homePostText);
 
         imgBtn.setOnClickListener(new View.OnClickListener() {
             @Override

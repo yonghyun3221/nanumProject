@@ -1,4 +1,4 @@
-package com.example.nanum.main;
+package com.example.nanum.home;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,9 +38,9 @@ public class HomeTabFragment extends Fragment // Fragment 클래스를 상속받
     {
         view = inflater.inflate(R.layout.home_layout,container,false);
 
-        sv = (ScrollView) view.findViewById(R.id.chatSV);
-        listView = (ListView)  view.findViewById(R.id.mainListView);
-        postBtn = (FloatingActionButton) view.findViewById(R.id.mainPost);
+        sv = (ScrollView) view.findViewById(R.id.homeSV);
+        listView = (ListView)  view.findViewById(R.id.homeListView);
+        postBtn = (FloatingActionButton) view.findViewById(R.id.homePost);
 
 
         adapter = new SingerAdapter();

@@ -7,7 +7,6 @@
     android:background="@drawable/postbg">
 
     <TextView
-        android:id="@+id/textView9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -41,7 +40,7 @@
             android:background="@drawable/textbutton_style">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/homePostPhoto"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="top|left"
@@ -57,7 +56,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/homePostImage"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="top"
@@ -82,7 +81,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <EditText
-            android:id="@+id/postTitleTxt"
+            android:id="@+id/homePostTitleText"
             android:layout_width="356dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
@@ -93,7 +92,7 @@
 
 
         <EditText
-            android:id="@+id/postTxt"
+            android:id="@+id/homePostText"
             android:layout_width="356dp"
             android:layout_height="383dp"
             android:layout_gravity="center"
@@ -103,7 +102,7 @@
             android:padding="10dp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/homePostSubmit"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right|bottom"

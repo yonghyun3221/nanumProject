@@ -15,7 +15,6 @@ import androidx.fragment.app.Fragment;
 
 import com.example.nanum.R;
 import com.example.nanum.login.LoginActivity;
-import com.example.nanum.profile.EditProfileActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -38,8 +37,8 @@ public class ProfileTabFragment extends Fragment // Fragment 클래스를 상속
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         view = inflater.inflate(R.layout.profile_layout,container,false);
-        editPro = (Button)view.findViewById(R.id.editProfile);
-        logout = (Button)view.findViewById(R.id.logout);
+        editPro = (Button)view.findViewById(R.id.profileEditBtn);
+        logout = (Button)view.findViewById(R.id.profileLogoutBtn);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail() // email addresses도 요청함

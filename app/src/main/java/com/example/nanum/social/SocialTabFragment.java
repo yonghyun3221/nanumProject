@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.nanum.main.PostTabActivity;
+import com.example.nanum.home.PostTabActivity;
 import com.example.nanum.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -36,9 +36,9 @@ public class SocialTabFragment extends Fragment{ // Fragment 클래스를 상속
         view = inflater.inflate(R.layout.social_layout,container,false);
 
 
-        sv = (ScrollView)view.findViewById(R.id.chatSV);
-        listView = (ListView)view.findViewById(R.id.chatlListView);
-        postBtn = (FloatingActionButton)view.findViewById(R.id.socialPost);
+        sv = (ScrollView)view.findViewById(R.id.socialSV);
+        listView = (ListView)view.findViewById(R.id.socialListView);
+        postBtn = (FloatingActionButton)view.findViewById(R.id.socialPostBtn);
         adapter = new SingerAdapter_social();
 
         adapter.addItem(new SingerItem_Social("소녀시대", "01071803396", R.drawable.pic));

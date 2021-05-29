@@ -14,7 +14,7 @@ import com.example.nanum.profile.ProfileTabFragment;
 import com.example.nanum.social.SocialTabFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import com.example.nanum.main.HomeTabFragment;
+import com.example.nanum.home.HomeTabFragment;
 
 public class MainActivity extends AppCompatActivity {
 

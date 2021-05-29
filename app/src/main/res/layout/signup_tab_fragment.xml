@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/semail"
+        android:id="@+id/signUpProEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/textbutton_style"
@@ -23,7 +23,7 @@
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
-        android:id="@+id/spw"
+        android:id="@+id/signUpProPW"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -36,12 +36,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/semail"
+        app:layout_constraintTop_toBottomOf="@+id/signUpProEmail"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
-        android:id="@+id/pwcheck"
+        android:id="@+id/signUpProPWCheck"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -54,12 +54,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spw"
+        app:layout_constraintTop_toBottomOf="@+id/signUpProPW"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/signUpProName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -71,12 +71,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pwcheck"
+        app:layout_constraintTop_toBottomOf="@+id/signUpProPWCheck"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
-        android:id="@+id/sphone"
+        android:id="@+id/signUpProPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -88,13 +88,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/signUpProName"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
 
 
     <EditText
-        android:id="@+id/location"
+        android:id="@+id/signUpProLocation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -106,13 +106,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sphone"
+        app:layout_constraintTop_toBottomOf="@+id/signUpProPhone"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
 
 
     <Button
-        android:id="@+id/signup"
+        android:id="@+id/signUpBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button_style"
@@ -123,7 +123,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/location"
+        app:layout_constraintTop_toBottomOf="@+id/signUpProLocation"
         app:layout_constraintVertical_bias="0.671"
         app:layout_constraintWidth_percent=".8" />
 

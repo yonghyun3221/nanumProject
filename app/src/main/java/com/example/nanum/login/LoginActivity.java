@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
         google = findViewById(R.id.sign_in_button);
         tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.viewPager);
-        login = (Button)findViewById(R.id.login);
+        //login = (Button)findViewById(R.id.loginBtn);
 
         google.setColorScheme(COLOR_DARK);
 
@@ -79,9 +79,9 @@ public class LoginActivity extends AppCompatActivity {
         tabLayout.animate().translationY(0).alpha(1).setDuration(1000).setDuration(100).start();
 
 
-        login = (Button)findViewById(R.id.login);
-        email = (EditText)findViewById(R.id.email);
-        passwd = (EditText) findViewById(R.id.passwd);
+        //login = (Button)findViewById(R.id.loginBtn);
+        email = (EditText)findViewById(R.id.loginEmail);
+        passwd = (EditText) findViewById(R.id.logInPasswd);
 
         // 앱에 필요한 사용자 데이터를 요청하도록 로그인 옵션을 설정한다.
         // DEFAULT_SIGN_IN parameter는 유저의 ID와 기본적인 프로필 정보를 요청하는데 사용된다.

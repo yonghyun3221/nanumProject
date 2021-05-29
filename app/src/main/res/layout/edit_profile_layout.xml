@@ -22,17 +22,17 @@
             android:layout_marginTop="4dp"
             android:background="@drawable/ic_baseline_arrow_back_24"
             android:stateListAnimator="@null"
-            app:layout_constraintEnd_toStartOf="@+id/textView7"
+            app:layout_constraintEnd_toStartOf="@+id/editProfileText"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/editProfileText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="정보 수정"
-            android:textColor="@color/white"
+            android:textColor="@color/bg_screen"
             android:textSize="40sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -55,17 +55,18 @@
         <LinearLayout
             android:layout_width="350dp"
             android:layout_height="413dp"
+            android:layout_marginTop="140dp"
+            android:background="@drawable/layout_style"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/signup"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.7"
-            android:background="@drawable/layout_style"/>
+            app:layout_constraintVertical_bias="0.7" />
 
         <EditText
-            android:id="@+id/semail"
+            android:id="@+id/editProEmail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/textbutton_style"
@@ -83,7 +84,7 @@
 
         <EditText
             android:inputType="textPassword"
-            android:id="@+id/spw"
+            android:id="@+id/EditProPW"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -95,13 +96,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/semail"
+            app:layout_constraintTop_toBottomOf="@+id/editProEmail"
             app:layout_constraintVertical_bias="0"
             app:layout_constraintWidth_percent=".8" />
 
         <EditText
             android:inputType="textPassword"
-            android:id="@+id/pwcheck"
+            android:id="@+id/editProPWCheck"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -113,12 +114,12 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spw"
+            app:layout_constraintTop_toBottomOf="@+id/EditProPW"
             app:layout_constraintVertical_bias="0"
             app:layout_constraintWidth_percent=".8" />
 
         <EditText
-            android:id="@+id/name"
+            android:id="@+id/editProName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -130,12 +131,12 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pwcheck"
+            app:layout_constraintTop_toBottomOf="@+id/editProPWCheck"
             app:layout_constraintVertical_bias="0"
             app:layout_constraintWidth_percent=".8" />
 
         <EditText
-            android:id="@+id/sphone"
+            android:id="@+id/editProPhone"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -147,13 +148,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/editProName"
             app:layout_constraintVertical_bias="0"
             app:layout_constraintWidth_percent=".8" />
 
 
         <EditText
-            android:id="@+id/location"
+            android:id="@+id/editProLocation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -165,13 +166,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sphone"
+            app:layout_constraintTop_toBottomOf="@+id/editProPhone"
             app:layout_constraintVertical_bias="0"
             app:layout_constraintWidth_percent=".8" />
 
 
         <Button
-            android:id="@+id/signup"
+            android:id="@+id/editProModify"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_style"
@@ -182,7 +183,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/location"
+            app:layout_constraintTop_toBottomOf="@+id/editProLocation"
             app:layout_constraintVertical_bias=".6"
             app:layout_constraintWidth_percent=".8" />
     </androidx.constraintlayout.widget.ConstraintLayout>

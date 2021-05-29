@@ -29,11 +29,11 @@ public class SignupTabFragment extends Fragment {
 
         //Toast.makeText(this.getActivity(), "hello from fragment", Toast.LENGTH_LONG).show();
 
-        semail= root.findViewById(R.id.semail);
-        spw = root.findViewById(R.id.spw);
-        spwcheck = root.findViewById(R.id.pwcheck);
-        name = root.findViewById(R.id.name);
-        signup = root.findViewById(R.id.signup);
+        semail= root.findViewById(R.id.signUpProEmail);
+        spw = root.findViewById(R.id.signUpProPW);
+        spwcheck = root.findViewById(R.id.signUpProPWCheck);
+        name = root.findViewById(R.id.signUpProName);
+        signup = root.findViewById(R.id.signUpBtn);
 
 
 

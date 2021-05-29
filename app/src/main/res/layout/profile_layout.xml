@@ -77,19 +77,17 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView3"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/ic_notifications" /> <!-- 맞는 아이콘 찾아서 바꾸기 -->
 
             <TextView
-                android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="알람"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <LinearLayout
@@ -101,19 +99,17 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView4"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/and1" /> <!-- 맞는 아이콘 찾아서 바꾸기 -->
 
             <TextView
-                android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="작성한 글"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <LinearLayout
@@ -124,19 +120,17 @@
             android:background="@drawable/layout_style2">
 
             <ImageView
-                android:id="@+id/imageView5"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 tools:srcCompat="@tools:sample/avatars" /> <!-- 맞는 아이콘 찾아서 바꾸기 -->
 
             <TextView
-                android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="작성한 댓글"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white" />
         </LinearLayout>
     </LinearLayout>
 
@@ -145,7 +139,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/fullName2"
+            android:id="@+id/profileName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
@@ -173,7 +167,7 @@
             android:text="이메일"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fullName2"
+            app:layout_constraintTop_toBottomOf="@+id/profileName"
             app:layout_constraintWidth_percent=".8" />
 
         <TextView
@@ -209,18 +203,18 @@
             app:layout_constraintWidth_percent=".8" />
 
         <Button
-            android:id="@+id/editProfile"
+            android:id="@+id/profileEditBtn"
             android:layout_width="53dp"
             android:layout_height="52dp"
             android:layout_margin="8dp"
             android:layout_marginBottom="12dp"
             android:background="@drawable/ic_baseline_edit_24"
-            app:layout_constraintBottom_toTopOf="@+id/logout"
+            app:layout_constraintBottom_toTopOf="@+id/profileLogoutBtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/logout"
+            android:id="@+id/profileLogoutBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

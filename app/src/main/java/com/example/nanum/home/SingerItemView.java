@@ -1,4 +1,4 @@
-package com.example.nanum.main;
+package com.example.nanum.home;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -37,10 +37,11 @@ public class SingerItemView extends LinearLayout {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.singer_item, this, true);
 
-        textView = (TextView) findViewById(R.id.mainName);
-        textView2 = (TextView) findViewById(R.id.mainText);
-        imageView = (ImageView) findViewById(R.id.mainImg);
+        textView = (TextView) findViewById(R.id.homeName);
+        textView2 = (TextView) findViewById(R.id.homeText);
+        imageView = (ImageView) findViewById(R.id.homeImg);
 
+        //여기부분 글꼴이나 색상 변집가능한듯
         textView.setTextColor(Color.BLUE);
 
     }
