@@ -1,4 +1,4 @@
-package com.example.nanum;
+package com.example.nanum.social;
 
 
 public class SingerItem_Social {

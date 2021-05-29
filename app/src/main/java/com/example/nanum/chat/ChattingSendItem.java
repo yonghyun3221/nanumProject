@@ -1,4 +1,4 @@
-package com.example.nanum;
+package com.example.nanum.chat;
 
 
 public class ChattingSendItem {

@@ -1,4 +1,4 @@
-package com.example.nanum;
+package com.example.nanum.chat;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.example.nanum.R;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.nanum;
+package com.example.nanum.explain;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.example.nanum.R;
+import com.example.nanum.login.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
 

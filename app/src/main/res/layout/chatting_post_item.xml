@@ -10,8 +10,8 @@
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="372dp"
+        android:layout_height="87dp"
         android:background="@drawable/chat_style"
         android:orientation="horizontal"
         android:padding="5dp"
@@ -19,12 +19,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/socialImg"
+            android:id="@+id/chatPostImg"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_margin="3dp"
-            android:src="@mipmap/ic_launcher"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/socialName"
+                android:id="@+id/chatPostText"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_gravity="left"

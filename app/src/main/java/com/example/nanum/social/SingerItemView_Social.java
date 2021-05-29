@@ -1,4 +1,4 @@
-package com.example.nanum;
+package com.example.nanum.social;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -9,11 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import com.bumptech.glide.Glide;
+import com.example.nanum.R;
 
-import de.hdodenhof.circleimageview.CircleImageView;
-
-public class ChattingPostView extends LinearLayout {
+public class SingerItemView_Social extends LinearLayout {
 
     TextView textView;
     TextView textView2;
@@ -21,13 +19,13 @@ public class ChattingPostView extends LinearLayout {
 
     // Generate > Constructor
 
-    public ChattingPostView(Context context) {
+    public SingerItemView_Social(Context context) {
         super(context);
 
         init(context);
     }
 
-    public ChattingPostView(Context context, @Nullable AttributeSet attrs) {
+    public SingerItemView_Social(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
         init(context);
@@ -36,13 +34,11 @@ public class ChattingPostView extends LinearLayout {
     // singer_item.xml을 inflation
     private void init(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.singer_item, this, true);
+        inflater.inflate(R.layout.singer_item_social, this, true);
 
-        textView = (TextView) findViewById(R.id.chatPostName);
-        textView2 = (TextView) findViewById(R.id.socialName);
+        textView = (TextView) findViewById(R.id.socialName);
+        textView2 = (TextView) findViewById(R.id.socialText);
         imageView = (ImageView) findViewById(R.id.socialImg);
-
-
     }
 
     public void setName(String name) {

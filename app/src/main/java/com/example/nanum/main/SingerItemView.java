@@ -1,6 +1,7 @@
-package com.example.nanum;
+package com.example.nanum.main;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
@@ -9,7 +10,9 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-public class SingerItemView_Social extends LinearLayout {
+import com.example.nanum.R;
+
+public class SingerItemView extends LinearLayout {
 
     TextView textView;
     TextView textView2;
@@ -17,13 +20,13 @@ public class SingerItemView_Social extends LinearLayout {
 
     // Generate > Constructor
 
-    public SingerItemView_Social(Context context) {
+    public SingerItemView(Context context) {
         super(context);
 
         init(context);
     }
 
-    public SingerItemView_Social(Context context, @Nullable AttributeSet attrs) {
+    public SingerItemView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
         init(context);
@@ -32,11 +35,14 @@ public class SingerItemView_Social extends LinearLayout {
     // singer_item.xml을 inflation
     private void init(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.singer_item_social, this, true);
+        inflater.inflate(R.layout.singer_item, this, true);
 
-        textView = (TextView) findViewById(R.id.socialName);
-        textView2 = (TextView) findViewById(R.id.socialText);
-        imageView = (ImageView) findViewById(R.id.socialImg);
+        textView = (TextView) findViewById(R.id.mainName);
+        textView2 = (TextView) findViewById(R.id.mainText);
+        imageView = (ImageView) findViewById(R.id.mainImg);
+
+        textView.setTextColor(Color.BLUE);
+
     }
 
     public void setName(String name) {

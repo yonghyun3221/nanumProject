@@ -1,4 +1,4 @@
-package com.example.nanum;
+package com.example.nanum.main;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -11,6 +11,9 @@ import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.nanum.MainActivity;
+import com.example.nanum.R;
 
 import java.io.InputStream;
 

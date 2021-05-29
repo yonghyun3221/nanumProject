@@ -1,4 +1,4 @@
-package com.example.nanum;
+package com.example.nanum.social;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,51 +9,47 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.ScrollView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.nanum.main.PostTabActivity;
+import com.example.nanum.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
-public class HomeTabFragment extends Fragment // Fragment 클래스를 상속받아야한다
-{
-    SingerAdapter adapter;
+public class SocialTabFragment extends Fragment{ // Fragment 클래스를 상속받아야한다
+    private View view;
+    SingerAdapter_social adapter;
     ScrollView sv;
     ListView listView;
     FloatingActionButton postBtn;
+    LayoutInflater layoutInflater;
 
-
-    private View view;
-
-    TextView text;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
-        view = inflater.inflate(R.layout.home_layout,container,false);
-
-        sv = (ScrollView) view.findViewById(R.id.chatSV);
-        listView = (ListView)  view.findViewById(R.id.mainListView);
-        postBtn = (FloatingActionButton) view.findViewById(R.id.mainPost);
+        view = inflater.inflate(R.layout.social_layout,container,false);
 
 
-        adapter = new SingerAdapter();
+        sv = (ScrollView)view.findViewById(R.id.chatSV);
+        listView = (ListView)view.findViewById(R.id.chatlListView);
+        postBtn = (FloatingActionButton)view.findViewById(R.id.socialPost);
+        adapter = new SingerAdapter_social();
 
-        adapter.addItem(new SingerItem("소녀시대", "01071803396", R.drawable.pic));
-        adapter.addItem(new SingerItem("유용현", "01071803396", R.drawable.pic));
-
+        adapter.addItem(new SingerItem_Social("소녀시대", "01071803396", R.drawable.pic));
+        adapter.addItem(new SingerItem_Social("소2녀시대", "01071803396", R.drawable.pic));
+        adapter.addItem(new SingerItem_Social("소3녀시대", "01071803396", R.drawable.pic));
         listView.setAdapter(adapter);
-
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                SingerItem item = (SingerItem) adapter.getItem(position);
+                SingerItem_Social item = (SingerItem_Social) adapter.getItem(position);
                 Toast.makeText(getActivity().getApplicationContext(), "선택 :"+item.getName(), Toast.LENGTH_LONG).show();
             }
         });
@@ -69,16 +65,15 @@ public class HomeTabFragment extends Fragment // Fragment 클래스를 상속받
         return view;
     }
 
-
-    class SingerAdapter extends BaseAdapter {
-        ArrayList<SingerItem> items = new ArrayList<SingerItem>();
+    class SingerAdapter_social extends BaseAdapter{
+        ArrayList<SingerItem_Social> items = new ArrayList<SingerItem_Social>();
 
         @Override
         public int getCount() {
             return items.size();
         }
 
-        public void addItem(SingerItem item) {
+        public void addItem(SingerItem_Social item) {
             items.add(item);
         }
 
@@ -92,24 +87,26 @@ public class HomeTabFragment extends Fragment // Fragment 클래스를 상속받
             return position;
         }
 
+        @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+
             // 뷰 객체 재사용
-            SingerItemView view = null;
+            SingerItemView_Social view = null;
             if (convertView == null) {
-                view = new SingerItemView(getActivity().getApplicationContext());
+                view = new SingerItemView_Social(getActivity().getApplicationContext());
             } else {
-                view = (SingerItemView) convertView;
+                view = (SingerItemView_Social) convertView;
             }
 
-            SingerItem item = items.get(position);
+            SingerItem_Social item = items.get(position);
 
             view.setName(item.getName());
             view.setMobile(item.getMobile());
             view.setImage(item.getResId());
 
-
             return view;
         }
+
     }
 
 }

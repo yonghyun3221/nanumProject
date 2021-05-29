@@ -1,4 +1,4 @@
-package com.example.nanum;
+package com.example.nanum.profile;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.nanum.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class EditProfileActivity extends AppCompatActivity {

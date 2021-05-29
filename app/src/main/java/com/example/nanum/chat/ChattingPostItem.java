@@ -1,13 +1,13 @@
-package com.example.nanum;
+package com.example.nanum.chat;
 
 
-public class SingerItem {
+public class ChattingPostItem {
     String name;
     String mobile;
     int resId;
 
     // Generate > Constructor
-    public SingerItem(String name, String mobile, int resId) {
+    public ChattingPostItem(String name, String mobile, int resId) {
         this.name = name;
         this.mobile = mobile;
         this.resId = resId;

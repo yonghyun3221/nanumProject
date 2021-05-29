@@ -1,4 +1,4 @@
-package com.example.nanum;
+package com.example.nanum.login;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+
+import com.example.nanum.MainActivity;
+import com.example.nanum.R;
 
 import java.io.BufferedReader;
 import java.io.IOException;

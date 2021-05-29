@@ -1,10 +1,12 @@
-package com.example.nanum;
+package com.example.nanum.login;
 
 import android.content.Context;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+
+import com.example.nanum.SignupTabFragment;
 
 public class LoginAdapter extends FragmentStatePagerAdapter {
 

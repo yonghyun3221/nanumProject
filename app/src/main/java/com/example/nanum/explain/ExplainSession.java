@@ -1,4 +1,4 @@
-package com.example.nanum;
+package com.example.nanum.explain;
 
 import android.content.Context;
 import android.content.SharedPreferences;
