@@ -45,7 +45,6 @@ public class HomeTabFragment extends Fragment // Fragment 클래스를 상속받
         adapter = new SingerAdapter();
 
         adapter.addItem(new SingerItem("유*현", "신발 275 사이즈 나눔합니다", R.drawable.shoes));
-        adapter.addItem(new SingerItem("정*연", "신발 275 사이즈 나눔합니다", R.drawable.shoes));
 
         listView.setAdapter(adapter);
 
