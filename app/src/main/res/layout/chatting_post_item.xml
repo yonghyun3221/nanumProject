@@ -10,11 +10,10 @@
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/chat_style"
+        android:layout_width="370dp"
+        android:layout_height="80dp"
         android:orientation="horizontal"
-        android:padding="5dp"
+        android:padding="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -35,7 +34,7 @@
             <TextView
                 android:id="@+id/chatPostName"
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"
+                android:layout_height="35dp"
                 android:layout_gravity="left"
                 android:padding="1dp"
                 android:text="이름"
@@ -46,7 +45,7 @@
             <TextView
                 android:id="@+id/chatPostText"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="35dp"
                 android:layout_gravity="left"
                 android:maxLength="150"
                 android:maxLines="15"
@@ -57,5 +56,6 @@
         </LinearLayout>
 
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,44 @@
     android:layout_height="match_parent"
     tools:context=".chat.ChatActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="660dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/chatSV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/chatSendText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@drawable/textbutton_style"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:maxLength="120"
+            android:maxLines="5"
+            android:padding="6dp" />
+
+        <Button
+            android:id="@+id/chatSendBtn"
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/layout_style"
+            android:scaleType="fitXY"
+            android:text="전송"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chat_recyclerview"
         android:layout_width="411dp"

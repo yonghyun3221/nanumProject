@@ -1,15 +1,18 @@
 package com.example.nanum.chat;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,16 +21,19 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nanum.R;
+import com.example.nanum.login.LoginActivity;
 
 import java.util.ArrayList;
 
 public class ChatTabFragment extends Fragment // Fragment 클래스를 상속받아야한다
 {
+
     SingerAdapter_chat_send sendAdapter;
     SingerAdapter_chat_post postAdapter;
     ScrollView sv;
     ListView listView;
-
+    Button btnPost;
+    RecyclerView recyclerView;
     private View view;
     TextView text;
 
@@ -39,6 +45,8 @@ public class ChatTabFragment extends Fragment // Fragment 클래스를 상속받
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         view = inflater.inflate(R.layout.chat_activity_main,container,false);
+
+
 /*
         sv = (ScrollView)view.findViewById(R.id.chatSV);
         listView = (ListView)view.findViewById(R.id.chatlListView);
@@ -57,11 +65,27 @@ public class ChatTabFragment extends Fragment // Fragment 클래스를 상속받
         listView.setAdapter(sendAdapter);
         listView.setAdapter(postAdapter);*/
 
+        btnPost = (Button) view.findViewById(R.id.chatSendBtn);
+
+        btnPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dataList.add(new DataItem("sleep", "유용현", Code.ViewType.LEFT_CONTENT));
+                System.out.println("dataList = : " + dataList.toString());
+
+
+                recyclerView.setAdapter(new MyAdapter(dataList));
+
+
+            }
+        });
+
 
         this.initializeData();
 
-        RecyclerView recyclerView = view.findViewById(R.id.chat_recyclerview);
 
+
+        recyclerView = view.findViewById(R.id.chat_recyclerview);
         LinearLayoutManager manager
                 = new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL,false);
 
@@ -77,8 +101,8 @@ public class ChatTabFragment extends Fragment // Fragment 클래스를 상속받
     {
         dataList = new ArrayList<>();
 
-        dataList.add(new DataItem("안녕하세요", "사용자1", Code.ViewType.LEFT_CONTENT));
-        dataList.add(new DataItem("안녕하세요", "사용자2", Code.ViewType.RIGHT_CONTENT));
+        dataList.add(new DataItem("안안녕녕녕녕녕하세요", "유용현", Code.ViewType.LEFT_CONTENT));
+        dataList.add(new DataItem("안이녀어엉어어어어어어하하하게게세세세세ㅔ요ㅛ요요요요요요용녕하세요", "김창주", Code.ViewType.RIGHT_CONTENT));
 
     }
 
@@ -89,13 +113,6 @@ public class ChatTabFragment extends Fragment // Fragment 클래스를 상속받
             public static final int RIGHT_CONTENT = 1;
         }
     }
-    ////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////
-
-
-    ////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////
-
 
 
     class SingerAdapter_chat_send extends BaseAdapter {
