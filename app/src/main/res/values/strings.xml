@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">nanum</string>
 
-    <string name="next">NEXT</string>
-    <string name="skip">Skip</string>
+    <string name="next">다음</string>
     <string name="start">확인</string>
 
     <string name="slide_title">안녕하세요</string>
@@ -21,7 +20,7 @@
     <string name="slide_4_desc">즐기고 있는 취미를 공유하거나 같이 즐겨보세요</string>
 
 
-    <string name="slide_5_desc">깨끗하고 즐거운 커뮤니티 앱을 같이 만들어나가봐요</string>
+    <string name="slide_5_desc">깨끗하고 즐거운 나눔 커뮤니티 앱을 같이 만들어나가봐요</string>
 
     <string name="editProfile">정보수정</string>
     <string name="logout">LOG OUT</string>

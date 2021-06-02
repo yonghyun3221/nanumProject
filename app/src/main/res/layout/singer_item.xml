@@ -7,19 +7,25 @@
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="129dp"
-        android:layout_margin="16dp">
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="@drawable/main_post_bg">
 
         <ImageView
             android:id="@+id/homeImg"
-            android:layout_width="128dp"
-            android:layout_height="127dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"
             android:src="@mipmap/ic_launcher" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="129dp"
+            android:layout_height="130dp"
             android:layout_marginLeft="10dp"
+            android:gravity="right"
             android:orientation="vertical">
 
             <TextView
@@ -41,6 +47,17 @@
                 android:text="전화번호"
                 android:textColor="@android:color/black"
                 android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/keyword"
+                android:textColor="@color/white"
+                android:text="#키워드"
+                android:padding="5dp"
+                android:background="@drawable/keyword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="bottom|right" />
 
         </LinearLayout>
     </TableRow>

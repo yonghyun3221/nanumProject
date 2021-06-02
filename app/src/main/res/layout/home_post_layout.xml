@@ -110,7 +110,7 @@
             android:backgroundTint="@color/white"
             android:stateListAnimator="@null"
             android:text="등록"
-            android:textColor="#8680ff"
+            android:textColor="@color/main_color"
             android:textStyle="bold" />
     </LinearLayout>
 

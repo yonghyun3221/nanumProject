@@ -5,12 +5,14 @@ public class SingerItem {
     String name;
     String mobile;
     int resId;
+    String keyword;
 
     // Generate > Constructor
-    public SingerItem(String name, String mobile, int resId) {
+    public SingerItem(String name, String mobile, int resId, String keyword) {
         this.name = name;
         this.mobile = mobile;
         this.resId = resId;
+        this.keyword = keyword;
     }
 
     // Generate > Getter and Setter
@@ -38,6 +40,14 @@ public class SingerItem {
         this.resId = resId;
     }
 
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
+    }
+
+    public String getKeyword() {
+        return keyword;
+    }
+
     // Generate > toString() : 아이템을 문자열로 출력
 
     @Override
@@ -45,6 +55,7 @@ public class SingerItem {
         return "SingerItem{" +
                 "name='" + name + '\'' +
                 ", mobile='" + mobile + '\'' +
+                ", keyword='" + keyword + '\'' +
                 '}';
     }
 }

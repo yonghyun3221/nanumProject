@@ -17,6 +17,7 @@ public class SingerItemView extends LinearLayout {
 
     TextView textView;
     TextView textView2;
+    TextView keyword1;
     ImageView imageView;
 
     // Generate > Constructor
@@ -41,6 +42,7 @@ public class SingerItemView extends LinearLayout {
         textView = (TextView) findViewById(R.id.homeName);
         textView2 = (TextView) findViewById(R.id.homeText);
         imageView = (ImageView) findViewById(R.id.homeImg);
+        keyword1 = (TextView) findViewById(R.id.keyword);
 
         //여기부분 글꼴이나 색상 변집가능한듯
        // textView.setTextColor(Color.BLUE);
@@ -48,6 +50,7 @@ public class SingerItemView extends LinearLayout {
         Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "font/nanumsquarer.ttf"); // font 폴더내에 있는 jua.ttf 파일을 typeface로 설정
         textView.setTypeface(typeface);
         textView2.setTypeface(typeface);
+        keyword1.setTypeface(typeface);
 
     }
 
@@ -61,6 +64,10 @@ public class SingerItemView extends LinearLayout {
 
     public void setImage(int resId) {
         imageView.setImageResource(resId);
+    }
+
+    public void setKeyword(String keyword) {
+        keyword1.setText(keyword);
     }
 
 }

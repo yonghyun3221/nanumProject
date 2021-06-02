@@ -7,7 +7,7 @@
     <EditText
         android:id="@+id/loginEmail"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:hint="이메일"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -24,7 +24,7 @@
     <EditText
         android:id="@+id/logInPasswd"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_marginTop="10dp"
         android:hint="비밀번호"
         android:paddingLeft="20dp"

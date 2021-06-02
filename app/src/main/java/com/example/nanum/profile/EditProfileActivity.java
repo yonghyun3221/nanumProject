@@ -13,12 +13,12 @@ import com.example.nanum.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class EditProfileActivity extends AppCompatActivity {
-    Button back;
+    ImageButton back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_profile_layout);
-        back= (Button) findViewById(R.id.backButton);
+        back= (ImageButton) findViewById(R.id.backButton);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override

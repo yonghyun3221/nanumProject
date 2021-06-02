@@ -4,13 +4,15 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/homelayout">
+    android:id="@+id/homelayout"
+    android:background="@color/dot_inactive_color">
 
     <LinearLayout
         android:id="@+id/ll"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:orientation="vertical"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
@@ -18,10 +20,11 @@
         <Button
             android:id="@+id/button3"
             android:layout_width="133dp"
-            android:layout_height="67dp"
+            android:layout_height="50dp"
             android:layout_margin="5dp"
+            android:textColor="@color/black"
             android:text="성포동"
-            android:background="@drawable/button_style"/>
+            android:background="@drawable/chat_send_style"/>
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -59,7 +62,9 @@
                 <ListView
                     android:id="@+id/homeListView"
                     android:layout_width="match_parent"
-                    android:layout_height="650dp" />
+                    android:layout_height="650dp"
+                    android:dividerHeight="0px"
+                    android:divider="#FFFFFF"/>
             </LinearLayout>
         </ScrollView>
     </ScrollView>

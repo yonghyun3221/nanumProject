@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Nanum" >
+        android:theme="@style/Theme.Nanum"
+        >
         <activity android:name=".login.LoginActivity"></activity>
         <activity
             android:name=".explain.SplashActivity"
@@ -27,7 +28,9 @@
         <activity android:name="com.example.nanum.home.PostTabActivity"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".profile.EditProfileActivity"></activity>
-        <activity android:name=".chat.ChatActivity"></activity>
+        <activity
+            android:name=".chat.ChatActivity"
+            android:windowSoftInputMode="adjustResize"></activity>
 
 
 

@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="275dp"
-        android:background="#8680ff"
+        android:background="#3f87ad"
         android:padding="20dp">
 
         <de.hdodenhof.circleimageview.CircleImageView

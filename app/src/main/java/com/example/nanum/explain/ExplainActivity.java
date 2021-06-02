@@ -25,8 +25,8 @@ public class ExplainActivity extends AppCompatActivity{
 
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
-    private LinearLayout dotsLayout;
-    private TextView[] dots;
+  //  private LinearLayout dotsLayout;
+   // private TextView[] dots;
     private int[] layouts;
     private Button btnNext;//, btnSkip;
     private ExplainSession session;
@@ -50,7 +50,7 @@ public class ExplainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_explain);
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
-        dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
+       // dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
         //btnSkip = (Button) findViewById(R.id.btn_skip);
         btnNext = (Button) findViewById(R.id.btn_next);
 
@@ -67,7 +67,7 @@ public class ExplainActivity extends AppCompatActivity{
                 R.layout.explain_tap5};
 
         // adding bottom dots
-        addBottomDots(0);
+        //addBottomDots(0);
 
         // making notification bar transparent
         changeStatusBarColor();
@@ -98,7 +98,7 @@ public class ExplainActivity extends AppCompatActivity{
             }
         });
     }
-
+/*
     private void addBottomDots(int currentPage) {
         dots = new TextView[layouts.length];
 
@@ -117,7 +117,7 @@ public class ExplainActivity extends AppCompatActivity{
         if (dots.length > 0)
             dots[currentPage].setTextColor(colorsActive);
     }
-
+*/
     private int getItem(int i) {
         return viewPager.getCurrentItem() + i;
     }
@@ -133,7 +133,7 @@ public class ExplainActivity extends AppCompatActivity{
 
         @Override
         public void onPageSelected(int position) {
-            addBottomDots(position);
+            //addBottomDots(position);
 
             // changing the next button text 'NEXT' / 'GOT IT'
             if (position == layouts.length - 1) {

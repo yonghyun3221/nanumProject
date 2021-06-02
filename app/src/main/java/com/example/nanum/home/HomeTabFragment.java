@@ -45,8 +45,8 @@ public class HomeTabFragment extends Fragment // Fragment 클래스를 상속받
 
         adapter = new SingerAdapter();
 
-        adapter.addItem(new SingerItem("소녀시대", "01071803396", R.drawable.pic));
-        adapter.addItem(new SingerItem("유용현", "01071803396", R.drawable.pic));
+        adapter.addItem(new SingerItem("소녀시대", "01071803396", R.drawable.pic, "아이돌"));
+        adapter.addItem(new SingerItem("유용현", "01071803396", R.drawable.pic, "용용"));
 
         listView.setAdapter(adapter);
 
@@ -107,6 +107,7 @@ public class HomeTabFragment extends Fragment // Fragment 클래스를 상속받
             view.setName(item.getName());
             view.setMobile(item.getMobile());
             view.setImage(item.getResId());
+            view.setKeyword(item.getKeyword());
 
 
             return view;

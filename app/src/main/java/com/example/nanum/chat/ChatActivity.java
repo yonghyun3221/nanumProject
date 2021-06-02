@@ -1,6 +1,7 @@
 package com.example.nanum.chat;
 
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -23,6 +24,7 @@ public class ChatActivity extends AppCompatActivity {
                 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false);
 
         recyclerView.setLayoutManager(manager); // LayoutManager 등록
+        //getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
         dataList.add(new DataItem("안녕하세요", "사용자1", Code.ViewType.LEFT_CONTENT));
         dataList.add(new DataItem("안녕하세요", "사용자2", Code.ViewType.RIGHT_CONTENT));

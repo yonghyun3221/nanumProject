@@ -55,12 +55,13 @@
         <EditText
             android:id="@+id/chatEditText"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="4"
             android:background="@drawable/textbutton_style"
             android:inputType="textMultiLine|textNoSuggestions"
             android:maxLength="120"
             android:maxLines="5"
+
             android:padding="6dp" />
 
         <Button
