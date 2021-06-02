@@ -1,10 +1,12 @@
 package com.example.nanum.chat;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -12,6 +14,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nanum.R;
 
@@ -20,33 +24,82 @@ import java.util.ArrayList;
 public class ChatTabFragment extends Fragment // Fragment 클래스를 상속받아야한다
 {
     SingerAdapter_chat_send sendAdapter;
+    SingerAdapter_chat_post postAdapter;
     ScrollView sv;
     ListView listView;
 
     private View view;
     TextView text;
 
+
+    ArrayList<DataItem> dataList;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
-        view = inflater.inflate(R.layout.chat_layout,container,false);
-
+        view = inflater.inflate(R.layout.chat_activity_main,container,false);
+/*
         sv = (ScrollView)view.findViewById(R.id.chatSV);
         listView = (ListView)view.findViewById(R.id.chatlListView);
-        sendAdapter = new SingerAdapter_chat_send();
 
+        sendAdapter = new SingerAdapter_chat_send();
+        postAdapter = new SingerAdapter_chat_post();
 
         sendAdapter.addItem(new ChattingSendItem("유용현", "끝낫나?", R.drawable.flower));
+        postAdapter.addItem(new ChattingPostItem("김창주", "아니??", R.drawable.flower));
+
+        sendAdapter.addItem(new ChattingSendItem("유용현1", "끝낫나1?", R.drawable.flower));
+        postAdapter.addItem(new ChattingPostItem("김창주1", "아니??1", R.drawable.flower));
+
+
 
         listView.setAdapter(sendAdapter);
+        listView.setAdapter(postAdapter);*/
 
+
+        this.initializeData();
+
+        RecyclerView recyclerView = view.findViewById(R.id.chat_recyclerview);
+
+        LinearLayoutManager manager
+                = new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL,false);
+
+        recyclerView.setLayoutManager(manager); // LayoutManager 등록
+        recyclerView.setAdapter(new MyAdapter(dataList));  // Adapter 등록
 
 
         return view;
     }
 
+
+    public void initializeData()
+    {
+        dataList = new ArrayList<>();
+
+        dataList.add(new DataItem("안녕하세요", "사용자1", Code.ViewType.LEFT_CONTENT));
+        dataList.add(new DataItem("안녕하세요", "사용자2", Code.ViewType.RIGHT_CONTENT));
+
+    }
+
+
+    public class Code {
+        public class ViewType{
+            public static final int LEFT_CONTENT = 0;
+            public static final int RIGHT_CONTENT = 1;
+        }
+    }
+    ////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////
+
+
+
     class SingerAdapter_chat_send extends BaseAdapter {
+
         ArrayList<ChattingSendItem> items = new ArrayList<ChattingSendItem>();
 
         @Override
@@ -78,6 +131,48 @@ public class ChatTabFragment extends Fragment // Fragment 클래스를 상속받
             }
 
             ChattingSendItem item = items.get(position);
+
+            view.setName(item.getName());
+            view.setMobile(item.getMobile());
+            view.setImage(item.getResId());
+
+
+            return view;
+        }
+    }
+
+    class SingerAdapter_chat_post extends BaseAdapter {
+        ArrayList<ChattingPostItem> items = new ArrayList<ChattingPostItem>();
+
+        @Override
+        public int getCount() {
+            return items.size();
+        }
+
+        public void addItem(ChattingPostItem item) {
+            items.add(item);
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return items.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        public View getView(int position, View convertView, ViewGroup parent) {
+            // 뷰 객체 재사용
+            ChattingPostView view = null;
+            if (convertView == null) {
+                view = new ChattingPostView(getActivity().getApplicationContext());
+            } else {
+                view = (ChattingPostView) convertView;
+            }
+
+            ChattingPostItem item = items.get(position);
 
             view.setName(item.getName());
             view.setMobile(item.getMobile());
