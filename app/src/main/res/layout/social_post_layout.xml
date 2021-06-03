@@ -40,7 +40,7 @@
             android:background="@drawable/textbutton_style">
 
             <Button
-                android:id="@+id/socialPostPhoto"
+                android:id="@+id/socialPostPhotoBtn"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="top|left"

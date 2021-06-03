@@ -54,7 +54,7 @@ public class PostTabActivity extends AppCompatActivity
         postBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("아이템 유저아이디 : " + userID);
+                System.out.println("main 유저아이디 : " + userID);
                // Toast.makeText(new AppCompatActivity(), "이건?" + userID, Toast.LENGTH_LONG).show();
                // Log.d("check", userID);
                 Intent intent = new Intent( getApplicationContext(), MainActivity.class);
