@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/social_post_bg">
 
     <ImageView
         android:id="@+id/socialImg"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="50dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="5dp"
         android:src="@mipmap/ic_launcher"
         android:scaleType="fitXY"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/dot_inactive_color"
+        android:alpha=".5"
+        android:layout_above="@id/socialImg" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="102dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:orientation="vertical">
 

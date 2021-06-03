@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.nanum.BackPressCloseHandler;
 import com.example.nanum.MainActivity;
 import com.example.nanum.R;
 import com.google.android.material.tabs.TabLayout;
@@ -41,12 +42,16 @@ public class LoginActivity extends AppCompatActivity {
     private final int RC_SIGN_IN = 123;
     private static final String TAG = "MainActivity";
 
+    private BackPressCloseHandler backPressCloseHandler;
+
     float v=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // 뒤로가기 핸들러
+        backPressCloseHandler = new BackPressCloseHandler(this);
 
         google = findViewById(R.id.sign_in_button);
         tabLayout = findViewById(R.id.tab_layout);
@@ -165,10 +170,6 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        //super.onBackPressed();
-    }
 
     public GoogleSignInClient getGoogleSignInClient(){
         return mGoogleSignInClient;
@@ -178,6 +179,11 @@ public class LoginActivity extends AppCompatActivity {
         this.logout = logout;
     }
 
+
+    @Override
+    public void onBackPressed() {
+        backPressCloseHandler.onBackPressed();
+    }
 
 
 

@@ -3,6 +3,7 @@ package com.example.nanum.login;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,6 +54,32 @@ public class LoginTabFragment extends Fragment {
         email.animate().translationX(0).alpha(1).setDuration(800).setDuration(300).start();
         passwd.animate().translationX(0).alpha(1).setDuration(800).setDuration(500).start();
         login.animate().translationX(0).alpha(1).setDuration(800).setDuration(700).start();
+
+        email.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey (View v,int KeyCode, KeyEvent event){
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) && KeyCode == KeyEvent.KEYCODE_ENTER) {
+                    passwd.requestFocus();
+                    return true;
+                }
+                return false;
+            }
+        });
+        passwd.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey (View v,int KeyCode, KeyEvent event){
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) && KeyCode == KeyEvent.KEYCODE_ENTER) {
+                    login.performClick();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+
+
+
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override

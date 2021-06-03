@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,7 +37,7 @@ public class ProfileTabFragment extends Fragment // Fragment 클래스를 상속
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
-        view = inflater.inflate(R.layout.profile_layout,container,false);
+        view = inflater.inflate(R.layout.profile_main_layout,container,false);
         editPro = (Button)view.findViewById(R.id.profileEditBtn);
         logout = (Button)view.findViewById(R.id.profileLogoutBtn);
 
@@ -56,8 +57,21 @@ public class ProfileTabFragment extends Fragment // Fragment 클래스를 상속
             }
         });
 
+        //앱 공유 코드
+    /*    LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.shareApp);
+        linearLayout.setOnClickListener(new TextView.OnClickListener() {
+            public void onClick(View view) {
+                Intent msg = new Intent(Intent.ACTION_SEND);
 
+                msg.addCategory(Intent.CATEGORY_DEFAULT);
+                msg.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=nanum");
+                msg.putExtra(Intent.EXTRA_TITLE, "NANUM");
+                msg.setType("text/plain");
+                startActivity(Intent.createChooser(msg, "앱을 선택해 주세요"));
 
+            }
+        });
+        */
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -3,11 +3,13 @@ package com.example.nanum.chat;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ScrollView;
@@ -36,7 +38,7 @@ public class ChatTabFragment extends Fragment // Fragment 클래스를 상속받
     RecyclerView recyclerView;
     private View view;
     TextView text;
-
+    EditText edit;
 
     ArrayList<DataItem> dataList;
 
@@ -66,8 +68,10 @@ public class ChatTabFragment extends Fragment // Fragment 클래스를 상속받
         listView.setAdapter(postAdapter);*/
 
         btnPost = (Button) view.findViewById(R.id.chatSendBtn);
+        edit = (EditText)view.findViewById(R.id.chatEditText);
 
         btnPost.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 dataList.add(new DataItem("sleep", "유용현", Code.ViewType.LEFT_CONTENT));
@@ -76,10 +80,21 @@ public class ChatTabFragment extends Fragment // Fragment 클래스를 상속받
 
                 recyclerView.setAdapter(new MyAdapter(dataList));
 
-
+                edit.setText(null);
             }
         });
 
+        edit.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey (View v,int KeyCode, KeyEvent event){
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) && KeyCode == KeyEvent.KEYCODE_ENTER) {
+                    btnPost.performClick();
+                    return true;
+                }
+                edit.setText(null);
+                return false;
+            }
+        });
 
         this.initializeData();
 

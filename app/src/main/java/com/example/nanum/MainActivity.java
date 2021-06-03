@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private FragmentManager fm;
     private FragmentTransaction ft;
 
+    private BackPressCloseHandler backPressCloseHandler;
+
     SocialTabFragment socialTabFragment = new SocialTabFragment();
     ChatTabFragment chatTabFragment = new ChatTabFragment();
     ProfileTabFragment profileTabFragment = new ProfileTabFragment();
@@ -65,10 +67,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         bottomNavigationView.setSelectedItemId(R.id.home);
+        // 뒤로가기 핸들러
+        backPressCloseHandler = new BackPressCloseHandler(this);
+
     }
     @Override
     public void onBackPressed() {
-        //super.onBackPressed();
+        backPressCloseHandler.onBackPressed();
     }
 }
 

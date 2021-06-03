@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="#3f87ad"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="#659fbd"
         android:padding="20dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -23,13 +24,14 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintVertical_bias="0.1" />
 
         <TextView
             android:id="@+id/fullName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
             android:layout_toRightOf="@+id/profileImage"
             android:text="이름님"
             android:textColor="@color/white"
@@ -39,7 +41,7 @@
             app:layout_constraintHorizontal_bias="0.04"
             app:layout_constraintStart_toEndOf="@+id/profileImage"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintVertical_bias="0.15" />
 
         <TextView
             android:id="@+id/profileID"
@@ -53,26 +55,77 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintHorizontal_bias="0.2"
             app:layout_constraintStart_toEndOf="@+id/profileImage"
             app:layout_constraintTop_toBottomOf="@+id/fullName"
-            app:layout_constraintVertical_bias="0.01" />
+            app:layout_constraintVertical_bias="0.0" />
 
+
+        <TextView
+            android:id="@+id/profilelocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textbutton_style"
+            android:hint="현재 설정된 위치"
+            android:textColor="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.642"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+        <Button
+            android:id="@+id/profileEditBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_send_style"
+            android:text="정보 수정"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/profileLogoutBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileImage"
+            app:layout_constraintVertical_bias="1" />
+
+        <Button
+            android:id="@+id/profileLogoutBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_send_style"
+            android:text="@string/logout"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#659fbd"
+        android:padding="15dp">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginTop="-70dp">
+        android:layout_gravity="right"
+        android:padding="20dp"
+        android:background="@color/white">
 
         <LinearLayout
-            android:id="@+id/linearLayout6"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:gravity="center"
-            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -80,7 +133,7 @@
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/layout_style2"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -90,20 +143,20 @@
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/ic_comment" /> <!-- 맞는 아이콘 찾아서 바꾸기 -->
+                    app:srcCompat="@drawable/ic_notifications" /> <!-- 맞는 아이콘 찾아서 바꾸기 -->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="작성한 댓글"
+                    android:text="알람"
                     android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/layout_style2"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -126,6 +179,7 @@
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/layout_style2"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -135,34 +189,19 @@
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
-                    app:srcCompat="@drawable/ic_notifications" /> <!-- 맞는 아이콘 찾아서 바꾸기 -->
+                    android:background="@drawable/ic_comment" /> <!-- 맞는 아이콘 찾아서 바꾸기 -->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="알람"
+                    android:text="작성한 댓글"
                     android:textColor="@color/black" />
             </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout5"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
-
             <LinearLayout
                 android:id="@+id/shareApp"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/layout_style2"
                 android:gravity="center"
@@ -181,14 +220,11 @@
                     android:gravity="center"
                     android:text="앱 공유"
                     android:textColor="@color/black" />
-
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginBottom="20dp"
-                android:layout_marginTop="20dp"
                 android:background="@drawable/layout_style2"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -207,54 +243,21 @@
                     android:text="문의하기"
                     android:textColor="@color/black" />
             </LinearLayout>
+
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/profilelocation"
-            android:layout_width="0dp"
+        <Button
+            android:id="@+id/outBtn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/textbutton_style"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="10dp"
-            android:hint="현재 설정된 위치"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
-            app:layout_constraintWidth_percent=".8" />
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:gravity="center"
-            android:orientation="horizontal"
+            android:background="@drawable/chat_send_style"
+            android:text="회원 탈퇴"
+            android:textColor="@color/main_color"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <Button
-                android:id="@+id/profileEditBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/chat_style"
-                android:text="정보 수정"
-                android:textColor="@color/black" />
-
-            <Button
-                android:id="@+id/profileLogoutBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/chat_style"
-                android:text="@string/logout"
-                android:textColor="@color/black"
-                app:layout_constraintWidth_percent=".8" />
-        </LinearLayout>
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </LinearLayout>
